@@ -1,0 +1,10 @@
+Prefilters map d values to other d values. 
+
+function filter(d, params)
+// returns a modified d
+
+Postfilters return a [r,g,b,a] list
+function toColor(d, params)
+//returns [r,g,b,a]
+
+Both pre and post filters are allowed a list of strings as arguments

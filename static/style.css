@@ -1,0 +1,45 @@
+
+canvas{
+  box-sizing: border-box;
+  width:90%;
+  border: 2px;
+  display: block;
+  border-style: solid;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttontip{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 10pt;
+  width:10em;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  padding-left: 4px;
+}
+
+.vtag{
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.progcontainer{
+  margin-top: 10px;
+  box-sizing: border-box;
+  width:100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: grey;
+  overflow: hidden;
+}
+
+#progbar{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-align: right;
+  height: 20px;
+  width: 20%;
+  background-color:green;
+}

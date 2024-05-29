@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="A tool for exploring Mandelbrot and assorted fractals. Supports Mandelbrot, Collatz, Julia set, and polyBrot algorithms.">
+	<title>Mandelbrot tool</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="header.css" rel="stylesheet" type="text/css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+	<link rel="manifest" href="./icons/site.webmanifest">
+	<link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="header">
+		<h1><a class="homelink" href="../">Abstract Mathematics and Friends</a></h1>
+		<h2>Mandelbrot Generator</h2>
+	</div>
+
+	<canvas id='canvas1'></canvas>
+
+	<div class="progcontainer">
+		<div id="progbar"></div>
+
+	</div>
+	<table>
+		<tr>
+			<td class="buttontip">File</td>
+			<td>
+				<button onclick="openFile()">Open</button>
+      <button onclick="saveFile()">Save</button>
+      <button onclick="downloadImage()">Export Image</button></td>
+    </tr>
+		<tr>
+			<td class="buttontip">Duration:</td>
+			<td>
+
+		<button onClick="duration(50)">D+</button>
+    <button onClick="duration(-50)">D-</button>
+    <button onclick="undo()">Undo</button>
+    <button id="postrender" onclick="postRenderToggle()">PostRender: Color</button>
+    <button onclick="toggleMouse()" id="mousemode">Mouse: Zoom</button>
+    </td>
+    </tr>
+    <tr>
+      <td class="buttontip">Algorithm:</td>
+      <td id="algbuttons"></td>
+    </tr>
+    
+    <tr>
+      <td class="buttontip">Rainbow Multiplier:</td>
+      <td>
+    <input type="number" min=1 id="rainbowInput" value='5'>
+    <button onclick="rainbow()">Set Rainbow</button>
+    </td></tr>
+    <tr>
+      <td class="buttontip">Zoom:</td>
+      <td>
+    <input type="text" id="coordsInput">
+    <button onclick="getCoords()">Get Coords</button>
+    <button onclick="putCoords()">Put Coords</button>
+    <button onclick="zoomSet(0)">Brot Zoom</button>
+    <button onclick="zoomSet(1)">Circle Zoom</button>
+    <button onclick="zoomSet(2)">Decade Zoom</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+    </td></tr>
+    <tr>
+      <td class="buttontip">Image Settings:</td>
+      <td>
+    <input type="text" id="resInput"name="resolution" list="resolutionList">
+    <datalist id="resolutionList">
+      <option value="1024,768">
+      <option value="1920,1080">
+      <option value="2560,1440">
+      <option value="3840,2160">
+        
+    </datalist>
+    <button onclick="updateRes()">Set Resolution</button>
+    
+    
+    </td></tr>
+    <tr>
+      <td class="buttontip">Algorithm Aux Args:</td>
+      <td>
+      <input type="text" id="brotExp" value='2'>
+      <button onclick="setArgs()">Set Args</button>
+    </td></tr>
+    <tr>
+      <td class="buttontip">Initial N Value:</td>
+      <td>
+      <input type="text" id="initN" value='0,0'>
+      <button onclick="setInitN()">Set Initial N</button>
+    </td></tr>
+    
+    </table>
+    <a class="vtag" href="./changelog.txt" target="_blank">Version 1.2.0<a>
+      <script src="fileIO.js"></script>
+    <script src="renderInterface.js"></script>
+    <script src="mouse.js"></script>
+    <script src="taskInterface.js"></script>
+    <script src="miscInterface.js"></script>
+    <script src="touchInterface.js"></script>
+     <script src="zoomAnimation.js"></script>
+  </body>
+</html>

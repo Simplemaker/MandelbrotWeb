@@ -1,0 +1,17 @@
+Fractal Process Objects use the JSON format. Designed from first principles
+
+By default, each object requires the following
+duration - an integer value which sets an upper bound
+sampleDimensions - an object {"x":val , "y":val} which contains the samples to take in each dimension
+varBounds - 2d array of the form [[x1,x2],[y1,y2]]
+finalColor - js filename of final colorization filter
+
+
+Optional values include
+maxDistance - an absolute value limit from the origin
+initN - the starting N value for computations
+alg - an algorithm filename to be executed
+argList - a list of comma separated arguments
+filterlist - a list of js files to modify duration values before final colorization
+
+Fractal process objects are meant to describe all information necessary for developing a rendered fractal image. 
